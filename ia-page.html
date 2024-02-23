@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCart</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .vidwrapper {
+            width: 100%;
+            max-width: 800px;
+            margin: 3em auto;
+            /* border: 5px solid yellowgreen; */
+        }
+        .vidcontainer {
+            width: 100%;
+            max-width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            /* border: 5px solid orange; */
+            position: relative;
+        }
+        .vidcontainer iframe, .vidcontainer video {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* iframe, video {
+            display: block;
+            margin: 1em auto;
+            height: calc(.5625 * 80vh);
+            max-width: 1280px;
+            max-height: 720px;
+            min-width: 320px;
+            min-height: 180px;
+        } */
+        .container-iatext {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .container-iatext {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .container-textcontentia {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #17a2b8;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        /* Agregar transiciones suaves para hover */
+        .container-textcontentia:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="page" class="site page-single">
+
+        <aside class="site-off desktop-hide">
+            <div class="off-canvas">
+                <div class="canvas-head flexitem">
+                    <div class="logo"><a href="page-single.html"><span class="circle"></span>.EcoCart</a></div>
+                    <a href="#" class="t-close flexcenter"><i class="ri-close-line"></i></a>
+                </div>
+                <div class="departments"></div>
+                <nav></nav>
+                <div class="thetop-nav"></div>
+            </div>
+        </aside>
+
+        <header>
+            <div class="header-top mobile-hide">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <div class="left">
+                            <ul class="flexitem main-links">
+                                <li><a href="">Quienes somos</a></li>
+                                <li><a href="">Lista de deseos</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="flexitem main-links">
+                                
+                                <li><a href="#">Incribirse</a></li>
+                                <li><a href="#">Mi cuenta</a></li>
+                                <li><a href="#">Seguimiento de mi orden</a></li>
+                                <li><a href="#">USD <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
+                                    <ul>
+                                        <li class="current"><a href="#">USD</a></li>
+                                        <li><a href="#">EURO</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Español <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
+                                    <ul>
+                                        <li class="current"><a href="#">Español</a></li>
+                                        <li><a href="#">Inglés</a></li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HEADER TOP -->
+     
+            <div class="header-nav">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <a href="#" class="trigger desktop-hide"><span class="i ri-menu-2-line"></span></a>
+
+                        <div class="left flexitem">
+                            <div class="logo"><a href="page-single.html"><span class="circle"></span>.EcoCart</a></div>
+                            <nav class="mobile-hide">
+                                <ul class="flexitem second-links">
+                                    <li><a href="#">Home</a></li>
+                                    <!-- <li><a href="#">Etiqueta1</a></li> -->
+                                    <li class="has-child">
+                                        <a href="#">Productos
+                                            <div class="icon-small"><i class="ri-arrow-down-s-line"></i></div>
+                                        </a>
+                                        <div class="mega">
+                                            <div class="container">
+                                                <div class="wrapper">
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Titulo 1</h4>
+                                                            <ul>
+                                                                <li><a href="#">relleno1</a></li>
+                                                                <li><a href="#">relleno2</a></li>
+                                                                <li><a href="#">relleno3</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Titulo 2</h4>
+                                                            <ul>
+                                                                <li><a href="#">relleno</a></li>
+                                                                <li><a href="#">relleno</a></li>
+                                                                <li><a href="#">relleno</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Titulo 3</h4>
+                                                            <ul class="all-brands">
+                                                                <li><a href="#">relleno1</a></li>
+                                                                <li><a href="#">relleno2</a></li>
+                                                                <li><a href="#">relleno3</a></li>
+                                                            </ul>
+                                                            <a href="#" class="view-all">View all brands <i class="ri-arrow-right-line"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexcol products">
+                                                        <div class="row">
+                                                            <div class="media">
+                                                                <div class="thumbnail object-cover">
+                                                                    <a href="#">
+                                                                        <img src="assets\products\baldosasEcoCart.webp" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-content">
+                                                                <h4>Producto estrella</h4>
+                                                                <a href="#" class="primary-button">Ordena ahora</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- <li><a href="#">Etiqueta3</a></li> -->
+                                </ul>
+                            </nav>
+                        </div>
+
+
+                        <div class="right">
+                            <ul class="flexitem second-links">
+                                <li class="mobile-hide"><a href="#">
+                                    <div class="icon-large"><i class="ri-heart-line"></i></div>
+                                    <div class="fly-item"><span class="item-number">0</span></div>
+                                </a></li>
+                                <li><a href="" class="iscart">
+                                    <div class="icon-large">
+                                        <i class="ri-shopping-cart-line"></i>
+                                        <div class="fly-item"><span class="item-number">0</span></div>
+                                    </div>
+                                    <div class="icon-text">
+                                        <div class="mini-text">Total</div>
+                                        <div class="cart-total">$0.00</div>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-main mobile-hide">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <div class="left">
+                            <div class="dpt-cat">
+                                <div class="dpt-head" style="visibility: hidden;">
+                                    <div class="main-text">Info</div>
+                                    <div class="mini-text mobile-hide">socios, proveedores y más</div>
+                                    <a href="#" class="dpt-trigger mobile-hide">
+                                        <i class="ri-menu-3-line ri-xl"></i>
+                                        <i class="ri-close-line ri-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="dpt-menu">
+                                    <ul class="second-links">
+                                        <li class="has-child socios">
+                                            <a href="#">
+                                                <div class="icon-large"><i class="ri-team-line"></i></div>
+                                                Socios
+                                                <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">socio 1</a></li>
+                                                <li><a href="#">socio 2</a></li>
+                                                <li><a href="#">socio 3</a></li>
+                                                <li><a href="#">socio 4</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-child lorem-ipsum1">
+                                            <a href="#">
+                                                <div class="icon-large"><i class="ri-team-line"></i></div>
+                                                lorem ipsum 1
+                                                <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                            </a>
+                                            <div class="mega">
+                                                <div class="flexcol">
+                                                    <div class="row">
+                                                        <h4><a href="#">Titulo 1</a></h4>
+                                                        <ul>
+                                                            <li><a href="#">relleno1</a></li>
+                                                            <li><a href="#">relleno2</a></li>
+                                                            <li><a href="#">relleno3</a></li>
+                                                            <li><a href="#">relleno4</a></li>
+                                                            <li><a href="#">relleno5</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="row">
+                                                        <h4><a href="#">Titulo 2</a></h4>
+                                                        <ul>
+                                                            <li><a href="#">relleno1</a></li>
+                                                            <li><a href="#">relleno2</a></li>
+                                                            <li><a href="#">relleno3</a></li>
+                                                            <li><a href="#">relleno4</a></li>
+                                                            <li><a href="#">relleno5</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="has-child lorem-ipsum2">
+                                            <a href="#">
+                                                <div class="icon-large"><i class="ri-team-line"></i></div>
+                                                lorem ipsum2
+                                                <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">relleno1</a></li>
+                                                <li><a href="#">relleno2</a></li>
+                                                <li><a href="#">relleno3</a></li>
+                                                <li><a href="#">relleno4</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <!-- <div class="search-box">
+                                <form action="" class="search">
+                                    <span class="icon-large"><i class="ri-search-line"></i></span>
+                                    <input type="search" placeholder="Buscar productos">
+                                    <button type="submit">Buscar</button>
+                                </form>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+        <main>
+            
+            <!-- slider -->
+
+            
+
+            <div class="separador">
+
+                <div class="stats-section">
+                    <div class="stat">
+                      <h1>Importancia de la IA en EcoCart</h1>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="vidwrapper">
+                <div class="vidcontainer">
+                    <!-- <iframe src="https://drive.google.com/file/d/1XacfrHWrQyTAbefK4iHI04bdBXZCtZu_/preview" frameborder="0" allow="autoplay">
+
+                    </iframe>  -->
+                    <video src="assets\banner\Animation house.mp4" autoplay controls loop></video>
+                </div>            
+            </div>
+
+            <div class="container-iatext">
+                <div class="container-textcontentia">
+                    <h2>¿De qué se trata todo esto?</h2>
+                    <br>
+                    <p>En <strong>EcoCart</strong>, estamos redefiniendo la experiencia de compra de baldosas con nuestra innovadora interfaz impulsada por inteligencia artificial. 
+                        Esta herramienta de vanguardia no solo le permite a cada cliente personalizar sus pedidos hasta el último detalle, 
+                        sino que también facilita la elección perfecta con recomendaciones inteligentes basadas en sus preferencias y necesidades. 
+                    </p>
+                    <div class="vidwrapper">
+                        <div class="vidcontainer">
+                            <video src="assets\banner\Baldosa Holograma.mp4" autoplay loop></video>
+                        </div>            
+                    </div>
+                    <p>
+                        Ya sea que esté buscando cobertura completa o soluciones fraccionadas como medias o cuartos de baldosa, nuestra IA está equipada con un sistema de precios dinámico que garantiza transparencia y justicia en cada cotización. 
+                     Visualice su espacio cobrando vida con simulaciones precisas y obtenga asesoramiento en tiempo real para hacer realidad su visión de un hogar sostenible y estéticamente agradable. 
+                     Con <strong>EcoCart</strong>, cada paso hacia la <Strong style="color: #64e320;">sostenibilidad</Strong> es un paso hacia un futuro más personalizado y conectado. 
+                     </p> 
+
+                </div>
+            </div>
+            
+
+        </main>
+        <footer>
+            <div class="newsletter">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="box">
+                            <div class="content">
+                                <h3>Únetenos</h3>
+                                <p>Obten un email sobre nuestras últimas actualizaciones y <strong>Ofertas especiales</strong></p><br>
+                            </div>
+                            <form action="" class="search">
+                                <span class="icon-large"><i class="ri-mai-line"></i></span>
+                                <input type="mail" placeholder="Correo electrónico" required>
+                                <button type="submit">Registrate</button>
+                            </form>
+                        </div>
+                        <p>&copy; 2024 EcoCart - Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+
+        <div class="menu-bottom desktop-hide">
+            <div class="container">
+                <div class="wrapper">
+                    <nav>
+                        <ul class="flexitem">
+                            <li>
+                                <a href="#">
+                                    <i class="ri-bar-chart-line"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ri-user-6-line"></i>
+                                    <span>Cuenta</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ri-heart-line"></i>
+                                    <span>Lista de deseos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="t-search">
+                                    <i class="ri-search-line"></i>
+                                    <span>Search</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <i class="ri-shopping-cart-line"></i>
+                                    <span>Cart</span>
+                                    <div class="fly-item">
+                                        <span class="item-number">0</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- menu bottom -->
+
+        <div class="search-bottom desktop-hide">
+            <div class="container">
+                <div class="wrapper">
+                    <form action="" class="search">
+                        <a href="#" class="t-close search-close flexcenter"><span class="i ri-close-line"></span></a>
+                        <span class="icon-large"><i class="ri-search-line"></i></span>
+                        <input type="search" placeholder="Buscar" required>
+                        <button type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- menu bottom -->
+
+        <div class="overlay">
+
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
